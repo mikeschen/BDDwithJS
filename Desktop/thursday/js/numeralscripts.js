@@ -10,3 +10,17 @@ var numeralMaker = function(number) {
   }
   return romanNumeral;
 };
+
+$(document).ready(function() {
+  $("form#numTranslator").submit(function(event) {
+    var numPhrase = $("input#numInput").val();
+    var results = numeralMaker(numPhrase);
+    $("#numResult").empty().append(results);
+    $("#result").show();
+    event.preventDefault();
+  });
+  $("form#Reset").submit(function(event) {
+    $("numberName")[0].reset();
+    event.preventDefault();
+  });
+});
