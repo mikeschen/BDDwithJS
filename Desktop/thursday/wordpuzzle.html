@@ -7,24 +7,20 @@
     <script src="js/puzzlescripts.js"></script>
     <title>Word Puzzle</title>
   </head>
-
   <body>
     <div class="container">
-    <h1>Word Puzzle</h1>
-
-    <form id="WordPuzzle">
-      <label for="puzzle">Enter a phrase!</label>
-      <input id="puzzle" type="text">
-
-      <button type="submit" class="btn btn-success">Submit</button>
-
-
-    </form>
-    <form id="Reset">
-      <button type="submit" class="btn btn-success">Reset</button>
-    </form>
-    <div id="result">
-      <p>Guess what it says: <span id="numberName"></span>.
+      <h1>Word Puzzle</h1>
+      <form id="WordPuzzle">
+        <label for="puzzle">Enter a phrase!</label>
+        <input id="puzzle" type="text">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <form id="Reset">
+        <button type="submit" class="btn btn-warning">Reset</button>
+      </form>
+      <div id="result">
+        <p>Guess what it says: <span id="puzzleResult"></span></p>
+      </div>
     </div>
   </body>
 </html>

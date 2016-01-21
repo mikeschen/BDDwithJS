@@ -6,7 +6,7 @@ var countUp = function(countUptoNumber, incrementNumber) {
   }
   return maxNumbers;
 }
-var maxNumbers = [];
+
 $(document).ready(function() {
   $("form#Numbers").submit(function(event) {
     var userCount = parseInt($("input#CountUp").val());
@@ -14,10 +14,8 @@ $(document).ready(function() {
     countUp(userCount, userIncrement);
     $("#numberName").empty().append(maxNumbers.join(" , "));
     $("#result").show();
-
     event.preventDefault();
   })
-
   $("form#Reset").submit(function(event) {
     $("#numberName")[0].reset();
     event.preventDefault();
